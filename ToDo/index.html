@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+       body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(0.25turn, #263d47, #ebf8e1, #806141);
+      /* margin: 0;
+      padding: 0; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+        #todo-container {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        #todo-input {
+    width: calc(100% - 120px);
+    padding: 12px 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#todo-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+#addTask {
+    margin-top: 5px;
+    padding: 12px 20px;
+    border: 2px solid #007bff;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#addTask:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#addTask:active {
+    transform: scale(0.98);
+}
+
+
+        #todo-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        #todo-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        #todo-list li.completed {
+            text-decoration: line-through;
+            color: gray;
+            background-color: #e6e6e6;
+        }
+
+        #todo-list li button {
+            padding: 5px 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        #todo-list li button:hover {
+            background-color: darkred;
+        }
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .cool-box {
+    border: 3px solid #007bff; 
+    border-radius: 15px;
+    padding: 20px; 
+    margin: 20px auto; 
+    background: linear-gradient(135deg, #f9f9f9, #e0f7fa); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 400px; 
+    font-family: Arial, sans-serif; 
+    font-size: 16px;
+    color: #333;
+    text-align: center; 
+}
+
+    </style>
+</head>
+<body>
+    <div id="todo-container" class="cool-box">
+        <h1>To-Do List</h1>
+        <div>
+            <input type="text" id="todo-input" placeholder="Enter a task" />
+            <button id="addTask">Add Task</button>
+        </div>
+        <ul id="todo-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

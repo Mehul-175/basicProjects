@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(to bottom, #87CEEB, #ffffff);
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      margin: 50px auto;
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .weather-info {
+      margin-top: 20px;
+    }
+    .hidden{
+        display: none;
+    }
+    .show{
+      color: #d9534f; /* Red color for error */
+    font-size: 24px; /* Text size */
+    font-weight: bold; /* Bold text */
+    margin-top: 10px; /* Space above the message */
+    text-align: center; /* Center the text */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Weather App</h1>
+    <input type="text" id="city-input" placeholder="Enter city name">
+    <button id="get-weather-btn">Get Weather</button>
+    <p id="loading" class="hidden">Loading...</p>
+    <div id="weather-info">
+      <h2 id="city-name"></h2>
+      <p id="temperature"></p>
+      <p id="description"></p>
+    </div>
+    <p id="error-message" class="hidden show">City not found. Please try again</p>
+    <p id="empty-field" class="hidden show">Please enter a city name</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
